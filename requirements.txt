@@ -1,0 +1,7 @@
+numpy
+flask
+gunicorn
+sklearn
+pandas
+PyYAML
+-e .
