@@ -3,7 +3,7 @@ import sys,os
 from housing.exception import HousingException
 from housing.logger import logging
 from housing.entity.artifact_entity import DataIngestionArtifact
-import tarfile
+import tarfile # extract zip files
 import numpy as np
 from six.moves import urllib
 import pandas as pd
