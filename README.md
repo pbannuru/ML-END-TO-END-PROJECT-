@@ -30,7 +30,7 @@ To check all version maintained by git
 git log
 To create version/commit all changes by git
 
-git commit -m "message"
+git commit -m "updated"
 To send version/changes to github
 
 git push origin main
