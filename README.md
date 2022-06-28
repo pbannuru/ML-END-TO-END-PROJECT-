@@ -1,6 +1,7 @@
 # ML-END-TO-END-PROJECT-
+This is a machine learning project where all end to end deployement code is available.
 
-Software and account Requirement.
+# Software and account Requirement: - 
 Github Account
 Heroku Account
 VS Code IDE
