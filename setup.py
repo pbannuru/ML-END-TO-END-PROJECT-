@@ -27,6 +27,8 @@ name=PROJECT_NAME,
 version=VERSION,
 author=AUTHOR,
 description=DESRCIPTION,
-packages=find_packages(), 
+packages=find_packages(), # return all the folder names where__init__.py is avilable and then install
 install_requires=get_requirements_list()
 )
+
+# __init__.py means library is made that can be import
