@@ -43,11 +43,17 @@
 
         5. config --- package =  __init__.py
             --> this is done based on entity
+            --> for every component need some  
+            --> config reads structure, all files in entity and provides configuration to pipeline when required.
         6. entity --- package =  __init__.py
             --> this a kind of table in database 
             --> ex:- for a student management system : database diagram
                 entity : student, classroom, subject, teacher, dept, exam etc we create classes for those entities.
             -->ML project : enity : 
-            --> in entity we define, artifact of each and evry component of pipeline
+            --> in entity we define, artifact of each and evry component of pipeline such as data ingestion artifact,data validation artifact etc, data ingestion config, data validation config etc this entity specifies structure of all these
 5. timestamp, hash value can be used to create data versions
 6. Artifact : any output generated while running cicd pipeline such as graph,file,folders,report,model etc
+7. tuple having name called named tuple looks like dictionary diff is that it cannot be modified as it is immutable.
+    --> we have used in entity and given varaible name same as nametuple 
+        ex: DataIngestionConfig = nametuple("DataIngestionConfig",["dataset_download_URL","download folder name","raw data file"])  
+        this is the format, raw data file = downloaded file will be zip file we need extract and store the data i.e. raw data file
