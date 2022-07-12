@@ -57,3 +57,47 @@
     --> we have used in entity and given varaible name same as nametuple 
         ex: DataIngestionConfig = nametuple("DataIngestionConfig",["dataset_download_URL","download folder name","raw data file"])  
         this is the format, raw data file = downloaded file will be zip file we need extract and store the data i.e. raw data file
+
+8.starting with configuration.py file:
+we have given init constructor where self.config_info reads yaml file, self.time_stamp gives current time, self.training pipeline returns the function get_training_pipeline_config
+
+1.def get_training_pipeline_config(self): 
+here 
+training_pipeline_config = self.config_info[TRAINING_PIPELINE_CONFIG_KEY]  = basically config.info reads yaml file , TRAINING_PIPELINE_CONFIG_KEY = "training_pipeline_config" this is created in constant file __ini__.py file 
+it means we are taking self.config.info[training_pipeline_config] his gives value = yaml file value i.e  [pipeline_name: housing ,artifact_dir: artifact]
+finally we used nametuple from config entity given value for artifact dir of name tuple i.e. training_pipeline_config = TrainingPipelineConfig(artifact_dir=artifact_dir)
+
+2.def get_data_ingestion_config(self) ->DataIngestionConfig:
+here we have artifact dir same as training pipeline as artifact main folder same for all and then
+created specific dataingestion folder with the help of constant.init.py , artifact dir and timestamp,
+and reading config.yaml file with self.config.info and using constant .init.py file given all key values.
+
+9. started component file :
+it gives artifact as an ouput
+component is where all main activities taken place .
+    1. data_ingestion.py:
+
+    after developing data_ingestion_config using that in component-data_ingestion.py we develop data_ingestion_artifact as an ouput
+
+    we do code for download_housing _data function using self.data_ingestion_config
+    housing_file_name = basename of the file we are downloading
+    use tgz dir, tgz file path
+    url;ib.request.urlretrieve (url,filepath) this downloads the file
+    using tar lib extract zipped downloaded file
+ 
+9'. started entity.artifact_entity.py:
+here all outputs of artifacts is declared through nametuple
+
+10. pipeline : start_data_ingestion function is created where we connect all i/p, o/p and run the data ingestion .
+
+11. do EDA
+12. create schema.yaml in config folder : scheme is info of data
+13. follow same steps for data validation as data ingestion.
+
+14. started data validation:
+from config.yaml file taken data validation keys and assigned to constant-__init__.py file
+then created nametuple in config.entity.py the result is obtained from configuration.py file. and in name tuple given report file and its path that is html visualisation page.
+creating func in component-data validation- for checking wether there is a file train/test available.
+using evidently library to check data drift (which means wether our data statistics has changed that wil be checked)
+
+15. in util.py  we have all functions such as rea_yaml_file () this is used in self.config.info whic reads config.yaml file

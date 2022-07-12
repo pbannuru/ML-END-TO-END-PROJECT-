@@ -6,10 +6,11 @@ from housing.component.data_transformation import DataTransformation
 
 def main():
     try:
-        #pipeline = Pipeline()
-       # pipeline.run_pipeline()
-        data_validation_config = Configuartion().get_data_transformation_config()
-        print(data_validation_config)
+        pipeline = Pipeline()
+        pipeline.run_pipeline()
+       # data_validation_config = Configuartion().get_data_transformation_config()
+       # logging.info("this is test")
+        #print(data_validation_config)
         #schema_file_path=r"C:\Users\pbann\ML-END-TO-END-PROJECT-\config\schema.yaml"
         #file_path=r"C:\Users\pbann\ML-END-TO-END-PROJECT-\housing\artifact\data_ingestion\2022-07-03-11-48-22\ingested_data\train\housing.csv"
 
