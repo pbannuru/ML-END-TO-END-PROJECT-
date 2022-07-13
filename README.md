@@ -74,3 +74,7 @@ Data Drift: When your datset stats gets change we call it as data drift
 Write a function to get training file path from artifact dir
 =======
 >>>>>>> 3458294a99f32ffa3e48a65a350bcac317571ce9
+
+deployed app:
+
+https://mlcicdapp.herokuapp.com/
