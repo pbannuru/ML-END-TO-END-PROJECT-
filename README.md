@@ -58,6 +58,7 @@ docker run -p 5000:5000 -e PORT=5000 d9df7a76c930
 To check running container in docker
 
 docker ps
+
 Tos stop docker conatiner
 
 docker stop <container_id>
