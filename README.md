@@ -83,7 +83,7 @@ Note: Image name for docker must be lowercase
 
 # Data Drift: When your datset stats gets change we call it as data drift
 
-<<<<<<< HEAD
+
 >>>>>>> 3458294a99f32ffa3e48a65a350bcac317571ce9
 
 deployed app:
