@@ -2,30 +2,39 @@
 This is a machine learning project where all end to end deployement code is available.
 
 # Software and account Requirement: - 
-Github Account
-Heroku Account
-VS Code IDE
-GIT cli
-GIT Documentation
-Creating conda environment
+
+1. Github Account
+
+2. Heroku Account
+
+3. VS Code IDE
+
+4. GIT cli
+
+5. GIT Documentation
+
+# Creating conda environment
 
 conda create -p venv python==3.7 -y
+
 conda activate venv/
 OR
 
 conda activate venv
-pip install -r requirements.txt
-To Add files to git
 
-git add .
+# pip install -r requirements.txt
+
+# To Add files to git
+
+1. git add .
 OR
 
-git add <file_name>
-Note: To ignore file or folder from git we can write name of file/folder in .gitignore file
+2. git add <file_name>
+## Note: To ignore file or folder from git we can write name of file/folder in .gitignore file
 
-To check the git status
+# To check the git status
 
-git status
+###git status
 To check all version maintained by git
 
 git log
